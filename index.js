@@ -9,10 +9,10 @@ const app = express();
 
 // connect to Mongo
 
-mongoose.connect('mongodb://localhost/ninja');
+mongoose.connect('mongodb://localhost:27017/ninja', { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 app.use('/api',routes);
 // Reqests
 

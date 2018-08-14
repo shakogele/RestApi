@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Ninja = require('./models/ninja');
+const Ninja = require('../models/ninja');
 
 router.get('/ninjas', function (req, res) {
   res.send({
